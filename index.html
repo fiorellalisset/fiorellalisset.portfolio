@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiorella Lisset — Graphic Designer</title>
+<meta name="description" content="Portafolio de Fiorella Lisset, diseñadora gráfica especializada en UI/UX, Branding y Diseño de Producto." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav">
+  <a href="#home" class="nav__mark">FL</a>
+  <nav class="nav__links">
+    <a href="#home">Home</a>
+    <a href="#works">Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Abrir menú" id="navToggle">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="section hero">
+  <div class="hero__spec">
+    <span class="chip" style="--c:#FF4E33">#FF4E33</span>
+    <span class="chip" style="--c:#3D2B6B">#3D2B6B</span>
+    <span class="chip" style="--c:#17171A">#17171A</span>
+    <span class="chip" style="--c:#F6F2EA; --tc:#17171A; border:1px solid #17171A22">#F6F2EA</span>
+  </div>
+
+  <p class="eyebrow">Portfolio — Ed. 2026</p>
+  <h1 class="hero__title">
+    Creative Solutions,<br /><span class="hero__name">Crafted with Precision.</span>
+  </h1>
+
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="hero__marquee-track">
+      <span>BRAND STRATEGY</span><span>·</span><span>VISUAL IDENTITY</span><span>·</span>
+      <span>PACKAGING</span><span>·</span><span>DIGITAL DESIGN</span><span>·</span>
+      <span>UI/UX</span><span>·</span><span>WEB DESIGN</span><span>·</span>
+      <span>SOCIAL MEDIA</span><span>·</span><span>ILLUSTRATION</span><span>·</span>
+      <span>ART DIRECTION</span><span>·</span><span>EDITORIAL</span><span>·</span>
+      <span>BRAND STRATEGY</span><span>·</span><span>VISUAL IDENTITY</span><span>·</span>
+      <span>PACKAGING</span><span>·</span><span>DIGITAL DESIGN</span><span>·</span>
+      <span>UI/UX</span><span>·</span><span>WEB DESIGN</span><span>·</span>
+      <span>SOCIAL MEDIA</span><span>·</span><span>ILLUSTRATION</span><span>·</span>
+      <span>ART DIRECTION</span><span>·</span><span>EDITORIAL</span><span>·</span>
+    </div>
+  </div>
+
+  <p class="hero__bio">
+    Diseñadora Gráfica de la Pontificia Universidad Católica del Perú.
+    Fusiono estética y funcionalidad para crear piezas visuales memorables
+    y efectivas. He participado en la creación y desarrollo de identidades
+    visuales únicas para diversas empresas y organizaciones — desde la
+    conceptualización hasta la implementación de marcas sólidas que
+    transmiten la esencia y los valores de cada cliente.
+  </p>
+
+  <div class="hero__cta">
+    <a href="#works" class="btn btn--primary">Ver proyectos</a>
+    <a href="#contact" class="btn btn--ghost">Contáctame</a>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section id="works" class="section works">
+  <p class="eyebrow">Selected Works</p>
+  <h2 class="section__title">Proyectos</h2>
+  <p class="section__intro">Una muestra de identidades de marca, interfaces y piezas visuales desarrolladas en distintos proyectos.</p>
+
+  <div class="grid" id="worksGrid"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <div class="card">
+    <div class="card__top">
+      <p class="eyebrow eyebrow--light">Let's create something</p>
+      <h2 class="card__name">Fiorella Lisset</h2>
+      <p class="card__role">Graphic Designer · Founder</p>
+    </div>
+    <div class="card__divider"></div>
+    <div class="card__links">
+      <a href="mailto:fiorella.lisset.design@gmail.com" class="card__link">
+        <span class="card__label">Email</span>
+        <span class="card__value">fiorella.lisset.design@gmail.com</span>
+      </a>
+      <a href="https://www.instagram.com/fio___art/" target="_blank" rel="noopener" class="card__link">
+        <span class="card__label">Instagram</span>
+        <span class="card__value">@fio___art</span>
+      </a>
+      <a href="https://www.linkedin.com/in/fiorella1et/" target="_blank" rel="noopener" class="card__link">
+        <span class="card__label">LinkedIn</span>
+        <span class="card__value">/in/fiorella1et</span>
+      </a>
+      <a href="https://www.youtube.com/channel/UCTRabzxndqgEKkc3IVt3Y0A" target="_blank" rel="noopener" class="card__link">
+        <span class="card__label">YouTube</span>
+        <span class="card__value">FL Design</span>
+      </a>
+    </div>
+  </div>
+  <footer class="footer">© 2026 Fiorella Lisset Design. All rights reserved.</footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
