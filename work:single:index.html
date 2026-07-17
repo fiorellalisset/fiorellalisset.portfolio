@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beldom | Yanbal - Fiorella Lisset</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .single-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: 40px 0;
+        }
+        .main-hero-img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+        .project-description {
+            max-width: 600px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 60px;
+        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .full-width-img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .showcase-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header idéntico -->
+    
+    <main style="max-width: 1100px; margin: 0 auto;">
+        <h1 class="single-title">Beldom | Yanbal</h1>
+        
+        <img src="/img/beldom-hero.jpg" class="main-hero-img" alt="Beldom Yanbal">
+
+        <div class="project-description">
+            <p><strong>Beldom by Yanbal-Belia Home</strong></p>
+            <p>Packaging | Arte final | Enfoque al detalle estético y coherencia visual de la marca para los mercados en todos los países.</p>
+        </div>
+
+        <!-- Bloques de imágenes de mockups secundarios -->
+        <div class="showcase-grid">
+            <img src="/img/beldom-box1.jpg" class="full-width-img" alt="Caja individual">
+            <img src="/img/beldom-flat1.jpg" class="full-width-img" alt="Plano técnico">
+        </div>
+
+        <img src="/img/beldom-flat2.jpg" class="full-width-img" alt="Despliegue completo empaque">
+    </main>
+
+    <!-- Footer idéntico -->
+</body>
+</html>

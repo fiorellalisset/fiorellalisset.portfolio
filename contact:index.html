@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me | Fiorella Lisset</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 60px auto;
+            text-align: center;
+        }
+        .contact-container h1 { font-size: 3rem; font-weight: 300; margin-bottom: 30px; }
+        .contact-subtitle { font-size: 1rem; margin-bottom: 4px; font-weight: 600; }
+        .contact-email { color: #555; text-decoration: none; display: inline-block; margin-bottom: 40px; }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid #ccc;
+            border-radius: 30px; /* Bordes hiper redondeados de tu mockup */
+            font-size: 0.9rem;
+            outline: none;
+            color: #333;
+        }
+        textarea {
+            border-radius: 20px;
+            resize: none;
+            height: 120px;
+        }
+        input::placeholder, textarea::placeholder { color: #999; }
+        
+        .submit-btn {
+            background: transparent;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            padding: 12px 35px;
+            border-radius: 30px;
+            cursor: pointer;
+            align-self: flex-start;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover { background: #1a1a1a; color: #fff; }
+    </style>
+</head>
+<body>
+    <!-- Header idéntico -->
+
+    <main>
+        <div class="contact-container">
+            <h1>Contact me</h1>
+            <p class="contact-subtitle">Project Inquiries</p>
+            <a href="mailto:fiorella.lisset.design@gmail.com" class="contact-email">fiorella.lisset.design@gmail.com</a>
+
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <input type="text" placeholder="Full name / Nombre y apel..." required>
+                    <input type="text" placeholder="Business/Empresa">
+                </div>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Write a message" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer idéntico -->
+</body>
+</html>

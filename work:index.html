@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Fiorella Lisset</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .page-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin: 40px 0 60px 0;
+        }
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .work-item {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .work-item h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 12px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .work-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <a href="/work" style="text-decoration: underline;">Work</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/logo-fiorella.png" alt="Fiorella Lisset"></a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">WORK</h1>
+
+        <div class="work-grid">
+            <!-- Ítem 1 -->
+            <a href="/work/beldom" class="work-item">
+                <div class="project-card"><img src="/img/beldom-cover.jpg" alt="Beldom"></div>
+                <h3>Alicorp</h3>
+            </a>
+            <!-- Ítem 2 -->
+            <a href="#" class="work-item">
+                <div class="project-card"><img src="/img/pawit-cover.jpg" alt="Pawit"></div>
+                <h3>Pawit</h3>
+            </a>
+            <!-- Ítem 3 -->
+            <a href="#" class="work-item">
+                <div class="project-card"><img src="/img/directo-cover.jpg" alt="Directo App"></div>
+                <h3>Directo App</h3>
+            </a>
+            <!-- Ítem 4 -->
+            <a href="#" class="work-item">
+                <div class="project-card"><img src="/img/premier-cover.jpg" alt="Premier Touch"></div>
+                <h3>Premier Touch Academy</h3>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Mismo footer -->
+    </footer>
+</body>
+</html>

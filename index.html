@@ -1,115 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fiorella Lisset — Graphic Designer</title>
-<meta name="description" content="Portafolio de Fiorella Lisset, diseñadora gráfica especializada en UI/UX, Branding y Diseño de Producto." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiorella Lisset | Creative Solutions</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilos específicos de la Home */
+        .hero-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin: 60px 0 40px 0;
+            letter-spacing: -0.02em;
+        }
+
+        /* Ticker / Marquesina infinita de categorías */
+        .ticker-wrapper {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            overflow: hidden;
+            background: #fff;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            padding: 12px 0;
+            margin-bottom: 60px;
+        }
+        .ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+        .ticker span {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #666;
+            padding: 0 20px;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* Layout Asimétrico de Proyectos */
+        .home-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Filas configurables */
+        .row-full { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center; }
+        .row-reverse { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center; }
+        .row-half { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        /* Estructura del Slider de imágenes */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .slider-track img {
+            width: 100%;
+            flex-shrink: 0;
+            border-radius: 16px;
+        }
+
+        /* Info de Proyecto */
+        .project-info h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
+        .project-info p { font-size: 0.9rem; color: #666; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .row-full, .row-reverse, .row-half { grid-template-columns: 1fr !important; gap: 20px; }
+            .hero-title { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="grain"></div>
+    <header>
+        <nav class="nav-links">
+            <a href="/work">Work</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/logo-fiorella.png" alt="Fiorella Lisset"></a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </header>
 
-<header class="nav">
-  <a href="#home" class="nav__mark">FL</a>
-  <nav class="nav__links">
-    <a href="#home">Home</a>
-    <a href="#works">Works</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button class="nav__toggle" aria-label="Abrir menú" id="navToggle">
-    <span></span><span></span><span></span>
-  </button>
-</header>
+    <main>
+        <h1 class="hero-title">Creative Solutions, Crafted with Precision.</h1>
 
-<!-- ============ HOME ============ -->
-<section id="home" class="section hero">
-  <div class="hero__spec">
-    <span class="chip" style="--c:#FF4E33">#FF4E33</span>
-    <span class="chip" style="--c:#3D2B6B">#3D2B6B</span>
-    <span class="chip" style="--c:#17171A">#17171A</span>
-    <span class="chip" style="--c:#F6F2EA; --tc:#17171A; border:1px solid #17171A22">#F6F2EA</span>
-  </div>
+        <!-- Marquesina Infinita -->
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <span>Brand Strategy</span> • <span>Visual Identity</span> • <span>Packaging</span> • <span>Digital Design</span> • <span>UI/UX</span> • <span>Web Design</span> • <span>Social Media</span> • <span>Illustration</span> •
+                <!-- Se duplica para el efecto infinito continuo -->
+                <span>Brand Strategy</span> • <span>Visual Identity</span> • <span>Packaging</span> • <span>Digital Design</span> • <span>UI/UX</span> • <span>Web Design</span> • <span>Social Media</span> • <span>Illustration</span> •
+            </div>
+        </div>
 
-  <p class="eyebrow">Portfolio — Ed. 2026</p>
-  <h1 class="hero__title">
-    Creative Solutions,<br /><span class="hero__name">Crafted with Precision.</span>
-  </h1>
+        <!-- Galería Asimétrica -->
+        <div class="home-grid">
+            
+            <!-- Proyecto 1: Izquierda Grande, Info Derecha -->
+            <div class="row-full">
+                <div class="slider-container" data-slider>
+                    <div class="slider-track">
+                        <img src="/img/alicorp-1.jpg" alt="Alicorp Packaging">
+                        <img src="/img/alicorp-2.jpg" alt="Alicorp Detalle">
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>#NuestroMotorEsMamá</h3>
+                    <p>Alicorp</p>
+                    <a href="/work/nuestro-motor-es-mama" class="explore-link">Explore more</a>
+                </div>
+            </div>
 
-  <div class="hero__marquee" aria-hidden="true">
-    <div class="hero__marquee-track">
-      <span>BRAND STRATEGY</span><span>·</span><span>VISUAL IDENTITY</span><span>·</span>
-      <span>PACKAGING</span><span>·</span><span>DIGITAL DESIGN</span><span>·</span>
-      <span>UI/UX</span><span>·</span><span>WEB DESIGN</span><span>·</span>
-      <span>SOCIAL MEDIA</span><span>·</span><span>ILLUSTRATION</span><span>·</span>
-      <span>ART DIRECTION</span><span>·</span><span>EDITORIAL</span><span>·</span>
-      <span>BRAND STRATEGY</span><span>·</span><span>VISUAL IDENTITY</span><span>·</span>
-      <span>PACKAGING</span><span>·</span><span>DIGITAL DESIGN</span><span>·</span>
-      <span>UI/UX</span><span>·</span><span>WEB DESIGN</span><span>·</span>
-      <span>SOCIAL MEDIA</span><span>·</span><span>ILLUSTRATION</span><span>·</span>
-      <span>ART DIRECTION</span><span>·</span><span>EDITORIAL</span><span>·</span>
-    </div>
-  </div>
+            <!-- Proyecto 2: Info Izquierda, Derecha Grande -->
+            <div class="row-reverse">
+                <div class="project-info" style="text-align: right;">
+                    <h3>18 Aniversario Vibra Directo</h3>
+                    <p>Directo App</p>
+                    <a href="/work/vibra-directo" class="explore-link">Explore more</a>
+                </div>
+                <div class="slider-container" data-slider>
+                    <div class="slider-track">
+                        <img src="/img/vibra-1.jpg" alt="Vibra Directo">
+                        <img src="/img/vibra-2.jpg" alt="Vibra Mockup">
+                    </div>
+                </div>
+            </div>
 
-  <p class="hero__bio">
-    Diseñadora Gráfica de la Pontificia Universidad Católica del Perú.
-    Fusiono estética y funcionalidad para crear piezas visuales memorables
-    y efectivas. He participado en la creación y desarrollo de identidades
-    visuales únicas para diversas empresas y organizaciones — desde la
-    conceptualización hasta la implementación de marcas sólidas que
-    transmiten la esencia y los valores de cada cliente.
-  </p>
+            <!-- Proyectos 3 y 4: Dos Columnas Iguales -->
+            <div class="row-half">
+                <div class="project-card">
+                    <div class="slider-container" data-slider>
+                        <div class="slider-track">
+                            <img src="/img/premier-1.jpg" alt="Premier Touch">
+                        </div>
+                    </div>
+                    <div class="project-info" style="margin-top: 15px;">
+                        <h3>Premier Touch Academy</h3>
+                        <p>Chicago, USA</p>
+                        <a href="#" class="explore-link">Explore more</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="slider-container" data-slider>
+                        <div class="slider-track">
+                            <img src="/img/vibra-1.jpg" alt="Vibra Directo">
+                        </div>
+                    </div>
+                    <div class="project-info" style="margin-top: 15px;">
+                        <h3>18 Aniversario Vibra Directo</h3>
+                        <p>Directo App</p>
+                        <a href="#" class="explore-link">Explore more</a>
+                    </div>
+                </div>
+            </div>
 
-  <div class="hero__cta">
-    <a href="#works" class="btn btn--primary">Ver proyectos</a>
-    <a href="#contact" class="btn btn--ghost">Contáctame</a>
-  </div>
-</section>
+        </div>
+    </main>
 
-<!-- ============ WORKS ============ -->
-<section id="works" class="section works">
-  <p class="eyebrow">Selected Works</p>
-  <h2 class="section__title">Proyectos</h2>
-  <p class="section__intro">Una muestra de identidades de marca, interfaces y piezas visuales desarrolladas en distintos proyectos.</p>
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+        <p>fiorella.lisset.design@gmail.com</p>
+        <p style="margin-top: 20px; font-size: 0.7rem; color: #aaa;">©2026 Fiorella Lisset Design. All rights reserved.</p>
+    </footer>
 
-  <div class="grid" id="worksGrid"></div>
-</section>
+    <!-- Lógica del Slider -->
+    <script>
+        document.querySelectorAll('[data-slider]').forEach(slider => {
+            const track = slider.querySelector('.slider-track');
+            const images = track.querySelectorAll('img');
+            if(images.length <= 1) return; // No deslizar si solo hay una imagen
 
-<!-- ============ CONTACT ============ -->
-<section id="contact" class="section contact">
-  <div class="card">
-    <div class="card__top">
-      <p class="eyebrow eyebrow--light">Let's create something</p>
-      <h2 class="card__name">Fiorella Lisset</h2>
-      <p class="card__role">Graphic Designer · Founder</p>
-    </div>
-    <div class="card__divider"></div>
-    <div class="card__links">
-      <a href="mailto:fiorella.lisset.design@gmail.com" class="card__link">
-        <span class="card__label">Email</span>
-        <span class="card__value">fiorella.lisset.design@gmail.com</span>
-      </a>
-      <a href="https://www.instagram.com/fio___art/" target="_blank" rel="noopener" class="card__link">
-        <span class="card__label">Instagram</span>
-        <span class="card__value">@fio___art</span>
-      </a>
-      <a href="https://www.linkedin.com/in/fiorella1et/" target="_blank" rel="noopener" class="card__link">
-        <span class="card__label">LinkedIn</span>
-        <span class="card__value">/in/fiorella1et</span>
-      </a>
-      <a href="https://www.youtube.com/channel/UCTRabzxndqgEKkc3IVt3Y0A" target="_blank" rel="noopener" class="card__link">
-        <span class="card__label">YouTube</span>
-        <span class="card__value">FL Design</span>
-      </a>
-    </div>
-  </div>
-  <footer class="footer">© 2026 Fiorella Lisset Design. All rights reserved.</footer>
-</section>
-
-<script src="script.js"></script>
+            let index = 0;
+            setInterval(() => {
+                index = (index + 1) % images.length;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }, 3500); // Cambia de imagen cada 3.5 segundos automáticamente
+        });
+    </script>
 </body>
 </html>
