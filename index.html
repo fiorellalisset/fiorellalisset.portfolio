@@ -1,207 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiorella Lisset | Creative Solutions</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <style>
-        /* Estilos específicos de la Home */
-        .hero-title {
-            text-align: center;
-            font-size: 2.8rem;
-            font-weight: 300;
-            margin: 60px 0 40px 0;
-            letter-spacing: -0.02em;
-        }
-
-        /* Ticker / Marquesina infinita de categorías */
-        .ticker-wrapper {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            overflow: hidden;
-            background: #fff;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-            padding: 12px 0;
-            margin-bottom: 60px;
-        }
-        .ticker {
-            display: flex;
-            white-space: nowrap;
-            animation: marquee 25s linear infinite;
-        }
-        .ticker span {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #666;
-            padding: 0 20px;
-        }
-        @keyframes marquee {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-50%, 0, 0); }
-        }
-
-        /* Layout Asimétrico de Proyectos */
-        .home-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Filas configurables */
-        .row-full { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center; }
-        .row-reverse { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center; }
-        .row-half { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-
-        /* Estructura del Slider de imágenes */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 16px;
-        }
-        .slider-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        .slider-track img {
-            width: 100%;
-            flex-shrink: 0;
-            border-radius: 16px;
-        }
-
-        /* Info de Proyecto */
-        .project-info h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
-        .project-info p { font-size: 0.9rem; color: #666; font-style: italic; }
-
-        @media (max-width: 768px) {
-            .row-full, .row-reverse, .row-half { grid-template-columns: 1fr !important; gap: 20px; }
-            .hero-title { font-size: 2rem; }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiorella Lisset — Graphic Designer</title>
+<meta name="description" content="Portafolio de Fiorella Lisset, diseñadora gráfica especializada en Branding, UI/UX y Diseño de Producto." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <nav class="nav-links">
-            <a href="/work">Work</a>
-            <a href="/contact">Contact</a>
-        </nav>
-        <div class="logo">
-            <a href="/"><img src="/logo-fiorella.png" alt="Fiorella Lisset"></a>
-        </div>
-        <div class="social-links">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-        </div>
-    </header>
+<header class="nav">
+  <a href="index.html" class="nav__logo">FL</a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html#home" class="active">Home</a>
+    <a href="works.html" class="">Work</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+  <div class="nav__social">
+    <a href="https://www.instagram.com/fio___art/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    <a href="https://www.linkedin.com/in/fiorella1et/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+    <a href="https://www.youtube.com/channel/UCTRabzxndqgEKkc3IVt3Y0A" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10L14.5 12L10.5 14V10Z" fill="currentColor"/></svg></a>
+    <a href="mailto:fiorella.lisset.design@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <button class="nav__toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</header>
 
-    <main>
-        <h1 class="hero-title">Creative Solutions, Crafted with Precision.</h1>
+<section id="home" class="section hero wrap">
+  <p class="eyebrow">Portfolio — Ed. 2026</p>
+  <h1 class="hero__title">Creative Solutions, Crafted with Precision.</h1>
+  <div class="hero__services">
+    <span>Brand Strategy</span><span>Visual Identity</span><span>Packaging</span>
+    <span>Digital Design</span><span>UI/UX</span><span>Web Design</span>
+    <span>Social Media</span><span>Illustration</span><span>Art Direction</span><span>Editorial</span>
+  </div>
+  <div class="hero__cta">
+    <a href="works.html" class="btn btn--primary">Ver proyectos</a>
+    <a href="contact.html" class="btn btn--ghost">Contáctame</a>
+  </div>
 
-        <!-- Marquesina Infinita -->
-        <div class="ticker-wrapper">
-            <div class="ticker">
-                <span>Brand Strategy</span> • <span>Visual Identity</span> • <span>Packaging</span> • <span>Digital Design</span> • <span>UI/UX</span> • <span>Web Design</span> • <span>Social Media</span> • <span>Illustration</span> •
-                <!-- Se duplica para el efecto infinito continuo -->
-                <span>Brand Strategy</span> • <span>Visual Identity</span> • <span>Packaging</span> • <span>Digital Design</span> • <span>UI/UX</span> • <span>Web Design</span> • <span>Social Media</span> • <span>Illustration</span> •
-            </div>
-        </div>
+  <div class="strip">
+    
+    <a class="strip__item" href="works/alicorp.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_88772dfb2a4f4258a063454dcb667c2c~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_88772dfb2a4f4258a063454dcb667c2c~mv2.jpg" alt="Alicorp" loading="lazy" />
+      <div class="strip__caption"><b>Alicorp</b><span>#NuestroMotorEsMamá</span></div>
+    </a>
+    <a class="strip__item" href="works/pawit.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_d18e879d01b74d08847771445be3101d~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_d18e879d01b74d08847771445be3101d~mv2.jpg" alt="Pawit" loading="lazy" />
+      <div class="strip__caption"><b>Pawit</b><span>Pawit.pe</span></div>
+    </a>
+    <a class="strip__item" href="works/directo-app.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_b8cac9c21f94416183d52031cd528631~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_b8cac9c21f94416183d52031cd528631~mv2.jpg" alt="Directo App" loading="lazy" />
+      <div class="strip__caption"><b>Directo App</b><span>18 Aniversario Vibra Directo</span></div>
+    </a>
+    <a class="strip__item" href="works/premier-touch-academy.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_7b6a82bde21b4ea296c442a03e0f26b1~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_7b6a82bde21b4ea296c442a03e0f26b1~mv2.jpg" alt="Premier Touch Academy" loading="lazy" />
+      <div class="strip__caption"><b>Premier Touch Academy</b><span>Chicago, USA</span></div>
+    </a>
+    <a class="strip__item" href="works/beldom-yanbal.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_0d201e36e13242b6b191cf03559316be~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_0d201e36e13242b6b191cf03559316be~mv2.jpg" alt="Beldom | Yanbal" loading="lazy" />
+      <div class="strip__caption"><b>Beldom | Yanbal</b><span>Packaging · Arte final</span></div>
+    </a>
+    <a class="strip__item" href="works/cafeina.html">
+      <img src="https://static.wixstatic.com/media/3d9b4c_4ced4e56b60947db956cba29948e5b4d~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/3d9b4c_4ced4e56b60947db956cba29948e5b4d~mv2.jpg" alt="Cafeina" loading="lazy" />
+      <div class="strip__caption"><b>Cafeina</b><span>Packaging · Social Media Content</span></div>
+    </a>
+  </div>
 
-        <!-- Galería Asimétrica -->
-        <div class="home-grid">
-            
-            <!-- Proyecto 1: Izquierda Grande, Info Derecha -->
-            <div class="row-full">
-                <div class="slider-container" data-slider>
-                    <div class="slider-track">
-                        <img src="/img/alicorp-1.jpg" alt="Alicorp Packaging">
-                        <img src="/img/alicorp-2.jpg" alt="Alicorp Detalle">
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>#NuestroMotorEsMamá</h3>
-                    <p>Alicorp</p>
-                    <a href="/work/nuestro-motor-es-mama" class="explore-link">Explore more</a>
-                </div>
-            </div>
+  <div class="bio">
+    <img class="bio__photo" src="https://static.wixstatic.com/media/3d9b4c_43301e3bbc9040e988d9214e0523d6fd~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80/3d9b4c_43301e3bbc9040e988d9214e0523d6fd~mv2.jpg" alt="Fiorella Lisset" />
+    <div>
+      <p class="bio__name">Fiorella Lisset</p>
+      <p class="bio__role">Graphic Designer · Founder</p>
+      <p class="bio__text">
+        Diseñadora Gráfica de la Pontificia Universidad Católica del Perú.
+        Fusiono estética y funcionalidad para crear piezas visuales memorables
+        y efectivas. He participado en la creación y desarrollo de identidades
+        visuales únicas para diversas empresas y organizaciones — desde la
+        conceptualización hasta la implementación de marcas sólidas que
+        transmiten la esencia y los valores de cada cliente.
+      </p>
+    </div>
+  </div>
+</section>
 
-            <!-- Proyecto 2: Info Izquierda, Derecha Grande -->
-            <div class="row-reverse">
-                <div class="project-info" style="text-align: right;">
-                    <h3>18 Aniversario Vibra Directo</h3>
-                    <p>Directo App</p>
-                    <a href="/work/vibra-directo" class="explore-link">Explore more</a>
-                </div>
-                <div class="slider-container" data-slider>
-                    <div class="slider-track">
-                        <img src="/img/vibra-1.jpg" alt="Vibra Directo">
-                        <img src="/img/vibra-2.jpg" alt="Vibra Mockup">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyectos 3 y 4: Dos Columnas Iguales -->
-            <div class="row-half">
-                <div class="project-card">
-                    <div class="slider-container" data-slider>
-                        <div class="slider-track">
-                            <img src="/img/premier-1.jpg" alt="Premier Touch">
-                        </div>
-                    </div>
-                    <div class="project-info" style="margin-top: 15px;">
-                        <h3>Premier Touch Academy</h3>
-                        <p>Chicago, USA</p>
-                        <a href="#" class="explore-link">Explore more</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="slider-container" data-slider>
-                        <div class="slider-track">
-                            <img src="/img/vibra-1.jpg" alt="Vibra Directo">
-                        </div>
-                    </div>
-                    <div class="project-info" style="margin-top: 15px;">
-                        <h3>18 Aniversario Vibra Directo</h3>
-                        <p>Directo App</p>
-                        <a href="#" class="explore-link">Explore more</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-socials">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-            <a href="#"><i class="bi bi-whatsapp"></i></a>
-        </div>
-        <p>fiorella.lisset.design@gmail.com</p>
-        <p style="margin-top: 20px; font-size: 0.7rem; color: #aaa;">©2026 Fiorella Lisset Design. All rights reserved.</p>
-    </footer>
-
-    <!-- Lógica del Slider -->
-    <script>
-        document.querySelectorAll('[data-slider]').forEach(slider => {
-            const track = slider.querySelector('.slider-track');
-            const images = track.querySelectorAll('img');
-            if(images.length <= 1) return; // No deslizar si solo hay una imagen
-
-            let index = 0;
-            setInterval(() => {
-                index = (index + 1) % images.length;
-                track.style.transform = `translateX(-${index * 100}%)`;
-            }, 3500); // Cambia de imagen cada 3.5 segundos automáticamente
-        });
-    </script>
+<footer class="footer">
+  <span>© 2026 Fiorella Lisset Design. All rights reserved.</span>
+  <div class="footer__social">
+    <a href="https://www.instagram.com/fio___art/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    <a href="https://www.linkedin.com/in/fiorella1et/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+    <a href="https://www.youtube.com/channel/UCTRabzxndqgEKkc3IVt3Y0A" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10L14.5 12L10.5 14V10Z" fill="currentColor"/></svg></a>
+    <a href="mailto:fiorella.lisset.design@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</footer>
+<script>
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle?.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
 </body>
 </html>

@@ -1,67 +1,55 @@
-# Fiorella Lisset — Portfolio
+# Fiorella Lisset — Portfolio (multi-página)
 
-Portafolio de una sola página con 3 secciones: **Home**, **Works** y **Contact**.
-Hecho en HTML, CSS y JavaScript puro (sin frameworks), listo para desplegar en Vercel.
+Sitio con páginas separadas (como tu Wix): Home, Works, una página por cada
+proyecto, y Contact. Fondo blanco, texto negro, tipografía Avenir.
 
 ## Estructura
 
 ```
-portfolio/
-├── index.html      → contenido y estructura
-├── style.css        → estilos y diseño
-├── script.js        → menú móvil + galería de proyectos
-└── README.md
+portfolio-web/
+├── index.html         → Home
+├── works.html          → Listado de los 22 proyectos
+├── contact.html        → Contacto
+├── style.css           → Estilos (colores, tipografía, layout)
+└── works/
+    ├── alicorp.html
+    ├── pawit.html
+    ├── ... (22 páginas, una por proyecto)
 ```
 
-## 1. Subir el proyecto a GitHub
+## ⚠️ Importante: reemplaza todo tu repo, no lo mezcles
 
-1. Crea un repositorio nuevo en https://github.com/new (por ejemplo `fiorella-portfolio`), sin agregar README ni .gitignore.
-2. En tu computadora, abre una terminal dentro de esta carpeta y ejecuta:
+Como ya subiste algunos archivos `.html` sueltos antes, lo más seguro es
+**borrar el contenido actual del repo y subir esta carpeta completa**, para
+evitar que archivos viejos queden mezclados con los nuevos.
 
-```bash
-git init
-git add .
-git commit -m "Primer commit: portafolio"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/fiorella-portfolio.git
-git push -u origin main
-```
+### Pasos:
 
-(Reemplaza `TU-USUARIO` y el nombre del repo por los tuyos)
+1. Entra a tu repositorio en GitHub (`fiorellalisset/fiorellalisset.portfolio`)
+2. Borra los archivos `.html` que subiste sueltos:
+   - Click en el archivo → ícono de basurero (🗑) arriba a la derecha → **Commit changes**
+   - Repite para cada archivo que no sea parte de esta nueva entrega
+3. Click en **Add file → Upload files**
+4. Arrastra **todo el contenido** de esta carpeta (`index.html`, `works.html`,
+   `contact.html`, `style.css`, y la carpeta `works/` completa con sus 22 archivos)
+   — GitHub permite arrastrar carpetas completas, mantiene la subcarpeta `works/`
+5. Baja y click **Commit changes**
 
-## 2. Desplegar en Vercel
-
-1. Entra a https://vercel.com e inicia sesión con tu cuenta de GitHub.
-2. Click en **Add New → Project**.
-3. Selecciona el repositorio que acabas de subir.
-4. Framework: elige **Other** (o déjalo en automático, Vercel detecta HTML estático).
-5. Click en **Deploy**.
-
-En menos de un minuto tendrás una URL pública tipo `fiorella-portfolio.vercel.app`.
-
-Cada vez que hagas `git push` a `main`, Vercel actualizará el sitio automáticamente.
-
-## Recomendado: usar tus propias imágenes
-
-Las imágenes de la sección **Works** actualmente apuntan a los servidores de Wix
-(tomadas de tu sitio actual, fiorellaportfolio.wixsite.com/fldesign) para que el
-portafolio se vea completo desde ya, con tus 22 proyectos.
-
-Para mayor estabilidad (Wix podría bloquear el acceso en el futuro):
-
-1. Descarga tus imágenes de proyectos.
-2. Crea una carpeta `assets/works/` en este proyecto.
-3. Guarda ahí tus imágenes (ej. `alicorp.jpg`, `pawit.jpg`, ...).
-4. En `script.js`, reemplaza el valor `img` de cada proyecto en el arreglo `works`
-   por la ruta local, por ejemplo: `img: "assets/works/alicorp.jpg"`.
-
-Dos proyectos ("Ilustración editorial" y "El Jurídico a la Medida") no tenían
-una imagen de portada accesible al momento de generar este sitio, así que se
-muestran solo con su título sobre un fondo de color. Puedes añadirles imagen
-con el mismo paso anterior (cambia `img: null` por la ruta de tu imagen).
+Vercel detectará el cambio y publicará la versión nueva automáticamente
+(no necesitas hacer nada en Vercel).
 
 ## Personalizar contenido
 
-- **Textos** (bio, nombre, rol): editar directamente en `index.html`.
-- **Colores y tipografía**: variables al inicio de `style.css` (sección `:root`).
-- **Redes y contacto**: sección `#contact` en `index.html`.
+- **Textos, bio, servicios**: editar `index.html` (sección `hero`)
+- **Colores y tipografía**: variables en la parte superior de `style.css` (`:root`)
+- **Datos de contacto**: `contact.html`
+
+## Imágenes
+
+Las imágenes de los proyectos siguen apuntando a los servidores de Wix por
+ahora. Para independizarte de Wix a futuro, descarga tus imágenes y
+reemplaza las URLs en cada archivo dentro de `works/`.
+
+Dos proyectos ("Ilustración editorial" y "El Jurídico a la Medida") no
+tenían imágenes disponibles al generar el sitio — sus páginas muestran solo
+el título por ahora.
